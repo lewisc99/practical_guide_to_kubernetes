@@ -1,9 +1,0 @@
-  - name: jenkins-creds
-    secret:
-      secretName: my-creds
-      defaultMode: 0444
-      items:
-      - key: username
-        path: jenkins-user
-      - key: password
-        path: jenkins-pass
