@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2024-11-14T01:27:55Z"
+  labels:
+    kubernetes.io/metadata.name: testing
+  name: testing
+  resourceVersion: "8191"
+  uid: d64e4e98-a1d6-4758-9c7b-ac13c73d08e3
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
