@@ -32,3 +32,4 @@ kubectl exec -it test -- curl \
 # The DNS name includes the namespace to specify the service in the correct namespace.
 kubectl exec -it test -- curl \
     "http://go-demo-2-api.testing:8080/demo/hello"
+                
