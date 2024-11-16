@@ -3,6 +3,7 @@
 kubectl config view \
     -o jsonpath='{.clusters[?(@.name=="k3d-mycluster")].cluster.server}'
 
+
 # Lists the contents of the 'certs' directory under 'usercode'. 
 # This is often used to check for certificates required for secure API access.
 ls usercode/certs
@@ -16,10 +17,21 @@ ls usercode/certs
 kubectl config view \
     -o jsonpath='{.clusters[?(@.name=="minikube")].cluster.server}'
 
+
+
+#first change the context to minikube only if you want to use minikube
+kubectl config use-context minikube
+
+#using windows and minikube
+kubectl config view -o jsonpath="{.clusters[?(@.name=='minikube')].cluster.server}"
+
 # Retrieves the path to the certificate authority (CA) file used by the 'minikube' cluster.
 # The CA is needed for secure communication with the API server.
 kubectl config view \
     -o jsonpath='{.clusters[?(@.name=="minikube")].cluster.certificate-authority}'
+
+#using windows and minikube
+ kubectl config view -o jsonpath="{.clusters[?(@.name=='minikube')].cluster.certificate-authority}"
 
 # -----------------------
 # Alternative ways to get Kubernetes API information
